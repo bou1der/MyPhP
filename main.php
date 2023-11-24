@@ -10,31 +10,37 @@ if(isset($_POST))
     }
     if((empty($arr[0])|| empty($arr[1]) || empty($arr[2]) || empty($arr[3])))
     {
-        
         die('Введите все данные!');
     }
     elseif (strlen($arr[0])< 2 || strlen($arr[1])< 2 )
     {
         die ('<pre>Имя и фамилия не должны быть короче 2-х символов!</pre>');
-    }
-    echo '<pre>'.print_r($arr,true).'</pre>';
+    } //Проверка при регистрации
+    $userCheck = "SELECT `NAME`, `SURNAME` FROM `users` WHERE `NAME` = '$arr[0]' AND `SURNAME` = '$arr[1]'";
+    $activeUser = $mysql->query($userCheck); 
+    if($activeUser->num_rows > 0) // Проверка существования пользователя в бд
+    {
+        echo "Данный пользователь уже существует!!";
 
-    $mysql->query("INSERT INTO `users` (`NAME`, `SURNAME`, `COLLGROUP`, `Date`) VALUES('$arr[0]', '$arr[1]', '$arr[2]','$arr [3]')");
-
+    }else{
+        if($mysql->query("INSERT INTO `users` (`NAME`, `SURNAME`, `COLLGROUP`, `Date`) VALUES('$arr[0]', '$arr[1]', '$arr[2]','$arr[3]')") === true)
+        {
+            echo "Успешная регистрация";
+        }else{
+        echo $mysql->error;
+        }
+    }   
+    
 }
 
 if(isset($_FILES))
 {
-    echo "FILES- ЗАГРУЖЕН";
     $current_path = $_FILES['avatar']['tmp_name'];
     $filename = $_FILES['avatar']['name'];
     $new_path = dirname(__FILE__). '/' . $filename;
-    echo $new_path;
     move_uploaded_file($current_path, $new_path);
-
-    connect_bd($arr);
-    $arr = 0;
 }
 
 $mysql->close();
+$arr = 0;
 ?>
