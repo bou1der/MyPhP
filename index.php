@@ -8,7 +8,7 @@
 
 </head>
 <body>
-    <form class="form" action="main.php" method="post" enctype = "multipart/form-data" >
+    <form class="form" action="/PhP/reg.php" method="post" enctype = "multipart/form-data" >
         
         <label>Ваше имя:<input type="text" name="name"></label>
         <label>Ваша фамилия:<input type="text" name="surname"></label>
@@ -18,8 +18,7 @@
         <input type="submit" value="Send" name="Send">
 
     </form>
-    <?
-    ?>
+
     <script src='main.js'></script>
 </body>
 </html>
