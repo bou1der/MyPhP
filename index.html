@@ -2,23 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="main.css">
-
+    <title>Cute Form</title>
 </head>
 <body>
-    <form class="form" action="/PhP/reg.php" method="post" enctype = "multipart/form-data" >
-        
-        <label>Ваше имя:<input type="text" name="name"></label>
-        <label>Ваша фамилия:<input type="text" name="surname"></label>
-        <label>Группа<input type="text" name="group"></label>
-        <label>Дата рождения<input type="date" name="birthday"></label>
-        <p>Ваш аватар:</p><input type="file" value = "Send file" name = "Sendfile">
-        <input type="submit" value="Send" name="Send">
+    <article class="block1">
+        <div class="mainCard">
+            <div class="inCard">
+                <aside class="register">
+                    <div class="inRegister">
+                        <img src="/resource/item/UωU.svg" alt="">
+                        <form action="/Php/reg.php" method="post">
+                            <input type="text" placeholder="Login!" name="login">
+                            <input type="password" placeholder="Password!" name="password">
+                            <input type="password" placeholder="Repit-pass!" name="repitPass">
+                        </form>
+                        <form action="/Php/reg.php" method="post">
+                            <button type="submit" name="send">Register!!</button>
+                        </form>
+                    </div>
+                </aside>
+                <aside class="login">
+                    <div class="inLogin">
+                        <img src="/resource/item/_ω_.svg" alt="">
+                        <form action="/PhP/login.php">
+                            <input type="text" placeholder="Login!" name="login">
+                            <input type="password" placeholder="Password!" name="password">
+                            <input type="text" style="opacity: 0; cursor:default;">
+                        </form>
+                        <form action="login.php" method="post">
+                            <button type="submit" name="Log">Log-in!!</button>
+                        </form>
+                    </div>
+                </aside>
+                <div class="plate">
+                    <div class="inPlate">
+                        <div class="Log"><button>Log-in</button></div>
+                        <div>
+                            <p>Password rule!!:</p>
+                            <p>The minimum length for your lovely password is 8 characters! Isn't it exciting?</p>
+                            <p>Don't forget to add some special characters to make it more unique and special! How about sprinkling in some cool symbols like (!#$%^&*)? They'll give your password a charming touch!</p>
+                            <p>Remember, it's essential for your password to be complex. After all, you wouldn't want any unwanted intrusions, would you? Let's keep it super secure!</p>
+                            <p>Lastly, kindly avoid using spaces in your password. We want to ensure it remains perfectly snug and tidy.</p>
+                            <div class="separator"></div>
+                            <div class="anotherLog">
+                                <p>If you'd like, there is another delightful way for you to register!</p>
+                                <img src="/resource/item/(ó﹏ò｡).svg" alt="">
+                            </div>
+                        </div>
+                        <div class="links">
+                            <a href="#"><img src="/resource/item/google.svg" alt=""></a>
+                            <a href="#"><img src="/resource/item/telegram.svg" alt=""></a>
+                            <a href="#"><img src="/resource/item/facebook.svg" alt=""></a>
+                            <a href="#"><img src="/resource/item/twitter.svg" alt=""></a>
+                            <a href="#"><img src="/resource/item/Vk.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
 
-    </form>
-
-    <script src='main.js'></script>
+<script src="main.js"></script>
 </body>
 </html>

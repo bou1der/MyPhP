@@ -38,6 +38,7 @@ body
     height: 100%;
     display: flex;
     flex-flow: row nowrap;
+    position: relative;
 }
 .inCard aside
 {
@@ -112,4 +113,90 @@ body
     font-size: 18px;
     font-family: Itim;
     color: rgb(138, 91, 74);
+}
+
+.plate
+{
+    position: absolute;
+    height: 100%;
+    max-height: 850px;
+    width: 50%;
+    max-width: 525px;
+    right: 0px;
+    transition: right 0.5s ease-in-out, left 0.5s ease-in-out;
+    background-color: #FFC4C4;
+    border-radius: 25px;
+    border-radius: 100px 25px 25px 100px ;
+    
+    
+}
+.inPlate
+{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+}
+.inPlate button
+{
+    color: rgb(138, 91, 74, 70%);
+    background-color: #FFD2CF;
+    width: 100%;
+    height: 100%;
+    max-width: 80px;
+    max-height: 80px;
+    min-height: 40px;
+    min-width: 40px;
+
+    padding: 0px;
+    border: none;
+    border-radius: 28px;
+    font-family: Itim;
+    font-size: 18px;
+
+    margin-top: 10%;
+    margin-left: 10%;
+
+    transition: border 0.1s ease-out;
+}
+.inPlate button:hover
+{
+    border: 3px #8A5B4A solid;
+}
+.inPlate button:active
+{
+    background-color: rgb(255, 210, 207, 45%);
+}
+.inPlate p
+{
+    font-size: 18px;
+    font-family: Itim;
+    color: #8A5B4A;
+    max-width: 400px;
+}
+.links
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    min-width: 100%;
+}
+.Log
+{
+width: 100%;
+}
+.separator 
+{
+    border: 1px #8A5B4A solid;
+    border-radius: 100px;
+}
+.anotherLog
+{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+.anotherLog p
+{
+    text-align: center;
 }
