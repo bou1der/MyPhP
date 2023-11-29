@@ -240,10 +240,10 @@
                     <div class="inRegister">
                         <img src="/resource/item/UωU.svg" alt="">
                         <form action="/Php/reg.php" method="POST">
-                            <input type="text" placeholder="Login!" name="login">
+                            <input type="text" placeholder="Login!" name="login" >
                             <input type="password" placeholder="Password!" name="password">
                             <input type="password" placeholder="Repit-pass!" name="repitPass">
-                            <button id="sendReg" type="submit" name="send" style="display:none;">Register!!</button>
+                            <button id="sendReg" type="submit" name="send">Register!!</button>
                         </form>
                             <label for="sendReg">Register!!</label>
                     </div>
@@ -255,7 +255,7 @@
                             <input type="text" placeholder="Login!" name="login">
                             <input type="password" placeholder="Password!" name="password">
                             <input type="text" style="opacity: 0; cursor:default;">
-                            <button style="display:none;" id="sendLog" type="submit" name="Log">Log-in!!</button>
+                            <button id="sendLog" type="submit" name="Log">Log-in!!</button>
                         </form>
                             <label for="sendLog" >Log-in!!</label>
                     </div>

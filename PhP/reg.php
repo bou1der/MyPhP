@@ -1,28 +1,29 @@
 <?php
+session_start();
 // require_once("bd.php");
+require_once("helper.php");
 if(isset($_POST))
 {
-
-    $arr = [$_POST['login'],$_POST['password'], $_POST['repitPass'], $_POST['send']];
+    $_SESSION['valid'] = [];
+    $arr = [$_POST['login'],$_POST['password'], $_POST['repitPass']];
     
     for($i = 0; $i < count($arr) ;$i++) //Удаление лишних пробелов
     {
         $arr[$i] = trim($arr[$i]);
     }
-    $arr[1] = hash('sha256', $arr[1]);
-    echo '<pre>'.  print_r($arr) . '</pre>';
-    // if((empty($arr[0])|| empty($arr[1]) || empty($arr[2])))
-    // {
-    //     die('Введите все данные!');
-    // }
-    // elseif (strlen($arr[0])< 2 && strlen($arr[1]) > 40)
-    // {
-    //     die ('<pre>Логин не должен быть короче 2-х и длинней 25 символов!</pre>');
-    // }
-    // elseif($arr[1] != $arr[2])
-    // {
-    //     die ('Пароли должны совпадать!');
-    // }
+
+    
+    if(empty($arr[0]))
+    {
+        $_SESSION['valid']['login'] = 'Неверное имя!';
+    }
+    if(!empty($_SESSION['valid']['login']))
+    {
+        // redirect(__DIR__ .'/../index.php');
+        header('Location: /index.php');
+    }
+    echo '<pre>'.print_r($arr).'</pre>';
+
     die();
     //Проверка при регистрации
     $userCheck = "SELECT `login`, `pass` FROM `LogPass` WHERE `login` = '$arr[0]' AND `pass` = '$arr[1]'";
@@ -51,5 +52,21 @@ if(isset($_FILES))
 }
 
 $mysql->close();
-$arr = 0;
+
+    // $arr[1] = hash('sha256', $arr[1]);
+    // if((empty($arr[0]) || empty($arr[1]) || empty($arr[2])))
+    // {
+    //     $_SESSION
+    //     die('Введите все данные!');
+    // }
+    // elseif (strlen($arr[0])< 2)
+    // {
+    //     die ('<pre>Логин не должен быть короче 2-х символов!</pre>');
+    // }
+    // elseif($arr[1] != $arr[2])
+    // {
+    //     die ('Пароли должны совпадать!');
+    // }
 ?>
+
+

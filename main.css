@@ -117,7 +117,10 @@ body
     font-family: Itim;
     color: rgb(138, 91, 74);
 }
-
+.inCard aside button
+{
+    display: none;
+}
 
 .front
 {
