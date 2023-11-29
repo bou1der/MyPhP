@@ -1,29 +1,38 @@
 <?php
-require_once("bd.php");
+// require_once("bd.php");
 if(isset($_POST))
 {
-    $arr = [$_POST['name'],$_POST['surname'], $_POST['group'], $_POST['birthday'], $_POST['Sendfile']];
+
+    $arr = [$_POST['login'],$_POST['password'], $_POST['repitPass'], $_POST['send']];
     
     for($i = 0; $i < count($arr) ;$i++) //Удаление лишних пробелов
     {
         $arr[$i] = trim($arr[$i]);
     }
-    if((empty($arr[0])|| empty($arr[1]) || empty($arr[2]) || empty($arr[3])))
-    {
-        die('Введите все данные!');
-    }
-    elseif (strlen($arr[0])< 2 || strlen($arr[1])< 2 )
-    {
-        die ('<pre>Имя и фамилия не должны быть короче 2-х символов!</pre>');
-    } //Проверка при регистрации
-    $userCheck = "SELECT `NAME`, `SURNAME` FROM `users` WHERE `NAME` = '$arr[0]' AND `SURNAME` = '$arr[1]'";
+    $arr[1] = hash('sha256', $arr[1]);
+    echo '<pre>'.  print_r($arr) . '</pre>';
+    // if((empty($arr[0])|| empty($arr[1]) || empty($arr[2])))
+    // {
+    //     die('Введите все данные!');
+    // }
+    // elseif (strlen($arr[0])< 2 && strlen($arr[1]) > 40)
+    // {
+    //     die ('<pre>Логин не должен быть короче 2-х и длинней 25 символов!</pre>');
+    // }
+    // elseif($arr[1] != $arr[2])
+    // {
+    //     die ('Пароли должны совпадать!');
+    // }
+    die();
+    //Проверка при регистрации
+    $userCheck = "SELECT `login`, `pass` FROM `LogPass` WHERE `login` = '$arr[0]' AND `pass` = '$arr[1]'";
     $activeUser = $mysql->query($userCheck); 
     if($activeUser->num_rows > 0) // Проверка существования пользователя в бд
     {
         echo "Данный пользователь уже существует!!";
 
     }else{
-        if($mysql->query("INSERT INTO `users` (`NAME`, `SURNAME`, `COLLGROUP`, `Date`) VALUES('$arr[0]', '$arr[1]', '$arr[2]','$arr[3]')") === true)
+        if($mysql->query("INSERT INTO `LogPass` (`login`, `pass`) VALUES('$arr[0]', '$arr[1]')") === true)
         {
             echo "Успешная регистрация";
         }else{
