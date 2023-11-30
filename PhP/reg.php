@@ -12,16 +12,26 @@ if(isset($_POST))
         $arr[$i] = trim($arr[$i]);
     }
 
-    
+    // valid
     if(empty($arr[0]))
     {
-        $_SESSION['valid']['login'] = 'Неверное имя!';
+        $_SESSION['valid']['login'] = '*input name!!';
     }
-    if(!empty($_SESSION['valid']['login']))
+    elseif (empty($arr[1]))
     {
-        // redirect(__DIR__ .'/../index.php');
-        header('Location: /index.php');
+        $_SESSION['valid']['pass'] = '*input password!!';
     }
+    elseif (empty($arr[2]))
+    {
+        $_SESSION['valid']['repass'] = '*input again password!!';
+    }
+    // redirect
+    if(!empty($_SESSION['valid']['login'] || $_SESSION['valid']['pass'] || $_SESSION['valid']['repass']))
+    {
+        $redirectTo = '/../index.php';
+        redirect($redirectTo);
+    }
+
     echo '<pre>'.print_r($arr).'</pre>';
 
     die();

@@ -1,3 +1,7 @@
+<?php
+session_start();
+require_once("PhP/helper.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +15,6 @@
     <article class="block1">
         <div class="carousel">
             <div class="content-carousel">
-                
                 <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
                 <img src="/resource/background/^•v•^.svg" alt="">
                 <img src="/resource/background/ó﹏ò.svg" alt="">
@@ -21,7 +24,7 @@
                 <img src="/resource/background/,_﹏_,.svg" alt="">
             </div>
             <div class="content-carousel">
-                <img src="/resource/background/•‿•.svg" alt="">
+            <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
                 <img src="/resource/background/^•v•^.svg" alt="">
                 <img src="/resource/background/ó﹏ò.svg" alt="">
                 <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
@@ -30,7 +33,7 @@
                 <img src="/resource/background/,_﹏_,.svg" alt="">
             </div>
             <div class="content-carousel">
-                <img src="/resource/background/ó﹏ò.svg" alt="">
+            <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
                 <img src="/resource/background/^•v•^.svg" alt="">
                 <img src="/resource/background/ó﹏ò.svg" alt="">
                 <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
@@ -39,7 +42,7 @@
                 <img src="/resource/background/,_﹏_,.svg" alt="">
             </div>
             <div class="content-carousel">
-                <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
+            <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
                 <img src="/resource/background/^•v•^.svg" alt="">
                 <img src="/resource/background/ó﹏ò.svg" alt="">
                 <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
@@ -48,7 +51,7 @@
                 <img src="/resource/background/,_﹏_,.svg" alt="">
             </div>
             <div class="content-carousel">
-                <img src="/resource/background/•‿•.svg" alt="">
+            <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
                 <img src="/resource/background/^•v•^.svg" alt="">
                 <img src="/resource/background/ó﹏ò.svg" alt="">
                 <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
@@ -57,7 +60,7 @@
                 <img src="/resource/background/,_﹏_,.svg" alt="">
             </div>
             <div class="content-carousel">
-                <img src="/resource/background/•ﻌ•.svg" alt="">
+            <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
                 <img src="/resource/background/^•v•^.svg" alt="">
                 <img src="/resource/background/ó﹏ò.svg" alt="">
                 <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
@@ -66,7 +69,7 @@
                 <img src="/resource/background/,_﹏_,.svg" alt="">
             </div>
             <div class="content-carousel">
-                <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
+            <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
                 <img src="/resource/background/^•v•^.svg" alt="">
                 <img src="/resource/background/ó﹏ò.svg" alt="">
                 <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
@@ -75,7 +78,7 @@
                 <img src="/resource/background/,_﹏_,.svg" alt="">
             </div>
             <div class="content-carousel">
-                <img src="/resource/background/•ﻌ•.svg" alt="">
+            <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
                 <img src="/resource/background/^•v•^.svg" alt="">
                 <img src="/resource/background/ó﹏ò.svg" alt="">
                 <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
@@ -86,7 +89,6 @@
         </div>
         <div class="carousel-2">
             <div class="content-carousel">
-                
                 <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
                 <img src="/resource/background/^•v•^.svg" alt="">
                 <img src="/resource/background/ó﹏ò.svg" alt="">
@@ -161,7 +163,6 @@
         </div>
         <div class="carousel-3">
             <div class="content-carousel">
-                
                 <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
                 <img src="/resource/background/^•v•^.svg" alt="">
                 <img src="/resource/background/ó﹏ò.svg" alt="">
@@ -171,16 +172,7 @@
                 <img src="/resource/background/,_﹏_,.svg" alt="">
             </div>
             <div class="content-carousel">
-                <img src="/resource/background/•‿•.svg" alt="">
-                <img src="/resource/background/^•v•^.svg" alt="">
-                <img src="/resource/background/ó﹏ò.svg" alt="">
                 <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
-                <img src="/resource/background/•‿•.svg" alt="">
-                <img src="/resource/background/•ﻌ•.svg" alt="">
-                <img src="/resource/background/,_﹏_,.svg" alt="">
-            </div>
-            <div class="content-carousel">
-                <img src="/resource/background/ó﹏ò.svg" alt="">
                 <img src="/resource/background/^•v•^.svg" alt="">
                 <img src="/resource/background/ó﹏ò.svg" alt="">
                 <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
@@ -198,24 +190,6 @@
                 <img src="/resource/background/,_﹏_,.svg" alt="">
             </div>
             <div class="content-carousel">
-                <img src="/resource/background/•‿•.svg" alt="">
-                <img src="/resource/background/^•v•^.svg" alt="">
-                <img src="/resource/background/ó﹏ò.svg" alt="">
-                <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
-                <img src="/resource/background/•‿•.svg" alt="">
-                <img src="/resource/background/•ﻌ•.svg" alt="">
-                <img src="/resource/background/,_﹏_,.svg" alt="">
-            </div>
-            <div class="content-carousel">
-                <img src="/resource/background/•ﻌ•.svg" alt="">
-                <img src="/resource/background/^•v•^.svg" alt="">
-                <img src="/resource/background/ó﹏ò.svg" alt="">
-                <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
-                <img src="/resource/background/•‿•.svg" alt="">
-                <img src="/resource/background/•ﻌ•.svg" alt="">
-                <img src="/resource/background/,_﹏_,.svg" alt="">
-            </div>
-            <div class="content-carousel">
                 <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
                 <img src="/resource/background/^•v•^.svg" alt="">
                 <img src="/resource/background/ó﹏ò.svg" alt="">
@@ -225,7 +199,34 @@
                 <img src="/resource/background/,_﹏_,.svg" alt="">
             </div>
             <div class="content-carousel">
+               <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
+                <img src="/resource/background/^•v•^.svg" alt="">
+                <img src="/resource/background/ó﹏ò.svg" alt="">
+                <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
+                <img src="/resource/background/•‿•.svg" alt="">
                 <img src="/resource/background/•ﻌ•.svg" alt="">
+                <img src="/resource/background/,_﹏_,.svg" alt="">
+            </div>
+            <div class="content-carousel">
+                <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
+                <img src="/resource/background/^•v•^.svg" alt="">
+                <img src="/resource/background/ó﹏ò.svg" alt="">
+                <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
+                <img src="/resource/background/•‿•.svg" alt="">
+                <img src="/resource/background/•ﻌ•.svg" alt="">
+                <img src="/resource/background/,_﹏_,.svg" alt="">
+            </div>
+            <div class="content-carousel">
+                <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
+                <img src="/resource/background/^•v•^.svg" alt="">
+                <img src="/resource/background/ó﹏ò.svg" alt="">
+                <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
+                <img src="/resource/background/•‿•.svg" alt="">
+                <img src="/resource/background/•ﻌ•.svg" alt="">
+                <img src="/resource/background/,_﹏_,.svg" alt="">
+            </div>
+            <div class="content-carousel">
+                <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
                 <img src="/resource/background/^•v•^.svg" alt="">
                 <img src="/resource/background/ó﹏ò.svg" alt="">
                 <img src="/resource/background/•̀ ᴖ •́.svg" alt="">
@@ -240,9 +241,9 @@
                     <div class="inRegister">
                         <img src="/resource/item/UωU.svg" alt="">
                         <form action="/Php/reg.php" method="POST">
-                            <input type="text" placeholder="Login!" name="login" >
-                            <input type="password" placeholder="Password!" name="password">
-                            <input type="password" placeholder="Repit-pass!" name="repitPass">
+                            <input type="text" placeholder="<?php echo $_SESSION['valid']['login'] ?? 'Login!';?>" name="login" aria-describedby="error" aria-invalid="<?php echo isset($_SESSION['valid']['login']) ? 'true' : 'false'?>">
+                            <input type="password" placeholder="<?php echo $_SESSION['valid']['pass'] ?? 'Password!';?>" name="password" aria-invalid="<?php echo isset($_SESSION['valid']['pass']) ? 'true' : 'false'?>">
+                            <input type="password" placeholder="<?php echo $_SESSION['valid']['repass'] ?? 'Repit-pass!';?>" name="repitPass" aria-invalid="<?php echo isset($_SESSION['valid']['repass']) ? 'true' : 'false'?>">
                             <button id="sendReg" type="submit" name="send">Register!!</button>
                         </form>
                             <label for="sendReg">Register!!</label>

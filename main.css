@@ -31,6 +31,7 @@ body
     border-radius: 25px;
     max-width: 1050px;
     max-height: 850px;
+
 }
 .inCard
 {
@@ -252,7 +253,7 @@ body
     position: absolute;
     z-index: -2;
     white-space: nowrap;
-    animation: slides 25s linear infinite;
+    animation: slides 30s linear infinite;
     margin-left: -50%;
     
 }
@@ -269,7 +270,7 @@ body
     position: absolute;
     z-index: -2;
     white-space: nowrap;
-    animation: slides3 15s linear infinite;
+    animation: slides3 20s linear infinite;
     margin-left: -50%;
 }
 .content-carousel
