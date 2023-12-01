@@ -11,7 +11,7 @@ if ($MBuser->num_rows > 0)
 }
 else
 {
-    echo "Пользователь ненайден>";
+    redirect("/../index.php");
 }
 
 ?>
