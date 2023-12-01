@@ -8,7 +8,8 @@ require_once("PhP/helper.php");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="/Css/main.css">
+    <link rel="stylesheet" href="/css/ourStyle.css">
     <title>Cute Form</title>
 </head>
 <body>
@@ -252,7 +253,7 @@ require_once("PhP/helper.php");
                 <aside class="login">
                     <div class="inLogin">
                         <img src="/resource/item/_ω_.svg" alt="">
-                        <form action="/PhP/login.php">
+                        <form action="/PhP/login.php" method="POST">
                             <input type="text" placeholder="Login!" name="login">
                             <input type="password" placeholder="Password!" name="password">
                             <input type="text" style="opacity: 0; cursor:default;">

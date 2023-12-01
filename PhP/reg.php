@@ -1,6 +1,6 @@
 <?php
 session_start();
-// require_once("bd.php");
+require_once("bd.php");
 require_once("helper.php");
 if(isset($_POST))
 {
@@ -16,27 +16,31 @@ if(isset($_POST))
     if(empty($arr[0]))
     {
         $_SESSION['valid']['login'] = '*input name!!';
+        redirect('/../index.php');
     }
     elseif (empty($arr[1]))
     {
         $_SESSION['valid']['pass'] = '*input password!!';
+        redirect('/../index.php');
     }
     elseif (empty($arr[2]))
     {
         $_SESSION['valid']['repass'] = '*input again password!!';
+        redirect('/../index.php');
     }
-    // redirect
-    if(!empty($_SESSION['valid']['login'] || $_SESSION['valid']['pass'] || $_SESSION['valid']['repass']))
+    elseif ($arr[1] != $arr[2])
     {
-        $redirectTo = '/../index.php';
-        redirect($redirectTo);
+        $_SESSION['valid']['pass'] = '*passwords dont match';
+        $_SESSION['valid']['repass'] = '*passwords dont match';
+        redirect('/../index.php');
     }
 
     echo '<pre>'.print_r($arr).'</pre>';
-
-    die();
+    $arr[0] = hash('sha256', $arr[0]);
+    $arr[1] = hash('sha256', $arr[1]);
+    echo '<pre>'. print_r($arr,true) .'</pre>';
     //Проверка при регистрации
-    $userCheck = "SELECT `login`, `pass` FROM `LogPass` WHERE `login` = '$arr[0]' AND `pass` = '$arr[1]'";
+    $userCheck = "SELECT `login`, `pass` FROM `LogPass` WHERE `login` = '$arr[0]'";
     $activeUser = $mysql->query($userCheck); 
     if($activeUser->num_rows > 0) // Проверка существования пользователя в бд
     {
@@ -52,31 +56,7 @@ if(isset($_POST))
     }   
     
 }
-
-if(isset($_FILES))
-{
-    $current_path = $_FILES['avatar']['tmp_name'];
-    $filename = $_FILES['avatar']['name'];
-    $new_path = dirname(__FILE__). '/' . $filename;
-    move_uploaded_file($current_path, $new_path);
-}
-
 $mysql->close();
-
-    // $arr[1] = hash('sha256', $arr[1]);
-    // if((empty($arr[0]) || empty($arr[1]) || empty($arr[2])))
-    // {
-    //     $_SESSION
-    //     die('Введите все данные!');
-    // }
-    // elseif (strlen($arr[0])< 2)
-    // {
-    //     die ('<pre>Логин не должен быть короче 2-х символов!</pre>');
-    // }
-    // elseif($arr[1] != $arr[2])
-    // {
-    //     die ('Пароли должны совпадать!');
-    // }
 ?>
 
 
